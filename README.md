@@ -27,15 +27,27 @@ Crear el fichero `config.json` en el directorio raíz de la aplicación con el s
 
 ## Ejecución
 
-Compilamos el código fuente del bot:
+Descargamos el código fuente del bot y entramos dentro:
+
+```bash
+git clone https://github.com/iesdpm/MinikBot.git
+cd MinikBot
+```
+
+Lo compilamos:
 
 ```java
 mvn compile
 ```
 
-Iniciamos el bot:
+E iniciamos el bot:
 
 ```bash
 mvn exec:java
 ```
 
+> Si queremos iniciarlo en segundo plano en GNU/Linux:
+>
+> ```bash
+> nohup exec:java &
+> ```
