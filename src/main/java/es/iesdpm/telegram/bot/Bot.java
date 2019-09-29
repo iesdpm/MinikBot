@@ -72,24 +72,24 @@ public class Bot extends TelegramLongPollingBot {
 		String username = mesg.getFrom().getUserName();
 		
 		if (!isAdmin(username)) {
-			send(id, "¡Eeeeepp @" + username + "! No estás autorizado para cancelar la suscripción de nadie");
+			send(id, "Â¡Eeeeepp @" + username + "! No estÃ¡s autorizado para cancelar la suscripciÃ³n de nadie");
 			return;
 		}
 		
 		if (!EMAIL_VALIDATOR.isValid(email)) {
-			send(id, "¿¡¡¿Qué dirección de email es esa, Maikel Nai?!!?!?!");
+			send(id, "Â¿Â¡Â¿Â¡QuÃ© direcciÃ³n de email es esa, Maikel Nai?!!?!?!");
 			return;
 		}
 		
 		if (config.getSubscribers().remove(email)) {
-			send(id, "¡Una pena! Ya no podré spamear a " + email);
+			send(id, "Â¡Una pena! Ya no podrÃ© spamear a " + email);
 			try {
 				config.save(configFile);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		} else
-			send(id, "No sé qué email es ese");
+			send(id, "No sÃ© que email es ese");
 	
 	}
 
@@ -98,17 +98,17 @@ public class Bot extends TelegramLongPollingBot {
 		String username = mesg.getFrom().getUserName();
 		
 		if (!isAdmin(username)) {
-			send(id, "¡Eeeeepp @" + username + "! No estás autorizado para suscribir a nadie");
+			send(id, "Â¡Eeeeepp @" + username + "! No estas autorizado para suscribir a nadie");
 			return;
 		}
 		
 		if (!EMAIL_VALIDATOR.isValid(email)) {
-			send(id, "¿¡¡¿Qué dirección de email es esa, Maikel Nai?!!?!?!");
+			send(id, "Â¿Â¡Â¿Â¡QuÃ© direcciÃ³n de email es esa, Maikel Nai?!!?!?!");
 			return;
 		}
 		
 		config.getSubscribers().add(email);
-		send(id, "¡Muy bien! A partir de ahora enviaré todas las tonterías que se dicen en este grupo al email " + email);
+		send(id, "Â¡Muy bien! A partir de ahora enviarÃ© todas las tonterÃ­as que se dicen en este grupo al email " + email);
 		try {
 			config.save(configFile);
 		} catch (IOException e) {
@@ -139,23 +139,23 @@ public class Bot extends TelegramLongPollingBot {
 	}
 
 	private void bye(Long id, Message mesg) {
-		send(id, "¡Ciao @" + mesg.getFrom().getUserName() + "!");
+		send(id, "ï¿½Ciao @" + mesg.getFrom().getUserName() + "!");
 	}
 
 	private void hello(Long id, Message mesg) {
-		send(id, "¡Hola @" + mesg.getFrom().getUserName() + "!");
+		send(id, "ï¿½Hola @" + mesg.getFrom().getUserName() + "!");
 	}
 
 	private void help(Long id, Message mesg) {
 		send(id, 
-				"¡Hola, soy " + getBotUsername() + "!\n" +
-				"Me encargo de enviar los mensajes de este grupo a una lista de distribución." + "\n" +
+				"Â¡Hola, soy " + getBotUsername() + "!\n" +
+				"Me encargo de enviar los mensajes de este grupo a una lista de distribuciÃ³n." + "\n" +
 				"Si me quieres dar alguna orden, puedes probar con las siguientes (no olvides la '/' del principio):" + "\n" + 
 				"- /listar = Te digo los emails que hay suscritos" + "\n" + 
-				"- /suscribir <email> = Añado el email indicado a la lista de distribución" + "\n" + 
-				"- /cancelar <email> = Elimino el email indicado de la lista de distribución" + "\n" + 
+				"- /suscribir <email> = AÃ±ado el email indicado a la lista de distribuciÃ³n" + "\n" + 
+				"- /cancelar <email> = Elimino el email indicado de la lista de distribuciÃ³n" + "\n" + 
 				"- /ayuda = Muestro esta ayuda" + "\n" +
-				"¡Aviso! Cualquier mensaje enviado a este grupo se enviará a los emails suscritos, excepto los mensajes que envío yo y las órdenes que me dan."
+				"Â¡Aviso! Cualquier mensaje enviado a este grupo se enviarÃ¡ a los emails suscritos, excepto los mensajes que envÃ­o yo y las Ã³rdenes que me dan."
 			);
 	}
 

@@ -24,12 +24,11 @@ public class EmailUtils {
 				email.setAuthenticator(new DefaultAuthenticator(emailConfig.getUsername(), emailConfig.getPassword()));
 				email.setSSLOnConnect(true);
 				email.setFrom(emailConfig.getUsername());
-				email.setSubject("Telegram del Departamento de Inform·tica");
+				email.setSubject("Telegram del Departamento de Inform√°tica");
 				email.setMsg(message);
 				email.addBcc(emails);
 				email.send();
 			} catch (EmailException e) {
-				System.out.print("[error]");
 				e.printStackTrace();
 			}
 		}).start();
