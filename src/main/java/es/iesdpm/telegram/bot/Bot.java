@@ -1,4 +1,4 @@
-package fvarrui.telegram.bot;
+package es.iesdpm.telegram.bot;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,9 +16,9 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-import fvarrui.telegram.config.Config;
-import fvarrui.telegram.utils.EmailUtils;
-import fvarrui.telegram.utils.Log;
+import es.iesdpm.telegram.config.Config;
+import es.iesdpm.telegram.utils.EmailUtils;
+import es.iesdpm.telegram.utils.Log;
 
 public class Bot extends TelegramLongPollingBot {
 

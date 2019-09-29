@@ -1,4 +1,4 @@
-package fvarrui.telegram.bot;
+package es.iesdpm.telegram.bot;
 
 import org.telegram.telegrambots.meta.api.objects.Message;
 

@@ -1,4 +1,4 @@
-package fvarrui.telegram.config;
+package es.iesdpm.telegram.config;
 
 public class Socket {
 	private String host;

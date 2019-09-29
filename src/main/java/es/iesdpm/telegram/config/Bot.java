@@ -1,4 +1,4 @@
-package fvarrui.telegram.config;
+package es.iesdpm.telegram.config;
 
 public class Bot {
 	private String token;

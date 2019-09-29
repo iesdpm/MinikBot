@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fvarrui.telegram</groupId>
-	<artifactId>Minikit0Bot</artifactId>
+	<groupId>es.iesdpm.telegram</groupId>
+	<artifactId>MinikBot</artifactId>
 	<version>0.1.0</version>
 
 	<description>Bot de Telegram para gestionar el grupo del Departamento de Informática del IES Domingo Pérez Minik</description>
@@ -12,6 +12,8 @@
 	<properties>
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.source>11</maven.compiler.source>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<exec.mainClass>es.iesdpm.telegram.bot.Main</exec.mainClass>
 	</properties>
 
 	<dependencies>
@@ -73,7 +75,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>libs/</classpathPrefix>
-							<mainClass>fvarrui.telegram.bot.Main</mainClass>
+							<mainClass>es.iesdpm.telegram.bot.Main</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

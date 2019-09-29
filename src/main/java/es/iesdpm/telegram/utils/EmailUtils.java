@@ -1,4 +1,4 @@
-package fvarrui.telegram.utils;
+package es.iesdpm.telegram.utils;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.apache.commons.mail.SimpleEmail;
 
 public class EmailUtils {
 	
-	public static fvarrui.telegram.config.Email emailConfig; 
+	public static es.iesdpm.telegram.config.Email emailConfig; 
 	
 	public static void sendEmail(String message, List<String> emails) {
 		sendEmail(message, emails.toArray(new String[emails.size()]));		

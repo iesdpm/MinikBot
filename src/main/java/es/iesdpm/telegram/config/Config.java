@@ -1,4 +1,4 @@
-package fvarrui.telegram.config;
+package es.iesdpm.telegram.config;
 
 import java.io.File;
 import java.io.IOException;

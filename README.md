@@ -27,9 +27,15 @@ Crear el fichero `config.json` en el directorio raíz de la aplicación con el s
 
 ## Ejecución
 
-Para iniciar MinikBot, ejecutamos el siguiente comando:
+Compilamos el código fuente del bot:
+
+```java
+mvn compile
+```
+
+Iniciamos el bot:
 
 ```bash
-nohup mvn exec:java &
+mvn exec:java
 ```
 

@@ -1,4 +1,4 @@
-package fvarrui.telegram.utils;
+package es.iesdpm.telegram.utils;
 
 import java.io.IOException;
 import java.util.logging.FileHandler;
