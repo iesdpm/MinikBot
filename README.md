@@ -1,9 +1,22 @@
 # MinikBot
 Bot de Telegram para gestionar el grupo del Departamento de Informática del IES Domingo Pérez Minik.
 
-## Configuración
+## Ejecución
 
-Crear el fichero `config.json` en el directorio raíz de la aplicación con el siguiente contenido:
+Descargamos el código fuente del bot y entramos dentro:
+
+```bash
+git clone https://github.com/iesdpm/MinikBot.git
+cd MinikBot
+```
+
+Lo compilamos:
+
+```java
+mvn compile
+```
+
+Creamos el fichero `config.json` en el directorio raíz de la aplicación con el siguiente contenido:
 
 ```json
 {
@@ -23,21 +36,6 @@ Crear el fichero `config.json` en el directorio raíz de la aplicación con el s
   "subscribers": [ <suscritos>, ... ],
   "admins": [ <administradores del bot>, ...]
 }
-```
-
-## Ejecución
-
-Descargamos el código fuente del bot y entramos dentro:
-
-```bash
-git clone https://github.com/iesdpm/MinikBot.git
-cd MinikBot
-```
-
-Lo compilamos:
-
-```java
-mvn compile
 ```
 
 E iniciamos el bot:
