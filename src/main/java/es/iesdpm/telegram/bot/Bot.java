@@ -139,11 +139,11 @@ public class Bot extends TelegramLongPollingBot {
 	}
 
 	private void bye(Long id, Message mesg) {
-		send(id, "�Ciao @" + mesg.getFrom().getUserName() + "!");
+		send(id, "¡¡Ciao @" + mesg.getFrom().getUserName() + "!");
 	}
 
 	private void hello(Long id, Message mesg) {
-		send(id, "�Hola @" + mesg.getFrom().getUserName() + "!");
+		send(id, "¡Hola @" + mesg.getFrom().getUserName() + "!");
 	}
 
 	private void help(Long id, Message mesg) {
@@ -153,7 +153,7 @@ public class Bot extends TelegramLongPollingBot {
 				"Si me quieres dar alguna orden, puedes probar con las siguientes (no olvides la '/' del principio):" + "\n" + 
 				"- /listar = Te digo los emails que hay suscritos" + "\n" + 
 				"- /suscribir <email> = Añado el email indicado a la lista de distribución" + "\n" + 
-				"- /cancelar <email> = Elimino el email indicado de la lista de distribución" + "\n" + 
+				"- /anular <email> = Elimino el email indicado de la lista de distribución" + "\n" + 
 				"- /ayuda = Muestro esta ayuda" + "\n" +
 				"¡Aviso! Cualquier mensaje enviado a este grupo se enviará a los emails suscritos, excepto los mensajes que envío yo y las órdenes que me dan."
 			);
