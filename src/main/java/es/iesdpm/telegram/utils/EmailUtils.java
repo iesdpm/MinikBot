@@ -16,6 +16,7 @@ public class EmailUtils {
 	}
 	
 	public static void sendEmail(String message, String ... emails) {
+		if (emails.length == 0) return;
 		new Thread(() -> {
 			try {
 				Email email = new SimpleEmail();
