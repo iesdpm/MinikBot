@@ -18,19 +18,30 @@ public class EmailUtils {
 	public static void sendEmail(String message, String ... emails) {
 		if (emails.length == 0) return;
 		new Thread(() -> {
-			try {
-				Email email = new SimpleEmail();
-				email.setHostName(emailConfig.getSmtp().getHost());
-				email.setSmtpPort(emailConfig.getSmtp().getPort());
-				email.setAuthenticator(new DefaultAuthenticator(emailConfig.getUsername(), emailConfig.getPassword()));
-				email.setSSLOnConnect(true);
-				email.setFrom(emailConfig.getUsername());
-				email.setSubject("Telegram del Departamento de Informática");
-				email.setMsg(message);
-				email.addBcc(emails);
-				email.send();
-			} catch (EmailException e) {
-				e.printStackTrace();
+			boolean send = false;
+			while (!send) { 
+				try {
+					Email email = new SimpleEmail();
+					email.setHostName(emailConfig.getSmtp().getHost());
+					email.setSmtpPort(emailConfig.getSmtp().getPort());
+					email.setAuthenticator(new DefaultAuthenticator(emailConfig.getUsername(), emailConfig.getPassword()));
+					email.setSSLOnConnect(true);
+					email.setFrom(emailConfig.getUsername());
+					email.setSubject("Telegram del Departamento de Informática");
+					email.setMsg(message);
+					email.addBcc(emails);
+					email.send();
+					send = true;
+				} catch (EmailException e) {
+					e.printStackTrace();
+					try {
+						Log.warn("Waiting {0} seconds to retry", 5000L);
+						Thread.sleep(5000L);
+					} catch (InterruptedException e1) {
+						e1.printStackTrace();
+					}
+				}
+
 			}
 		}).start();
 	}
