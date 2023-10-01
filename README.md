@@ -1,13 +1,13 @@
-# MinikBot
-Bot de Telegram para gestionar el grupo del Departamento de Informática del IES Domingo Pérez Minik.
+# CanaBot
+Bot de Telegram para gestionar el grupo del Departamento de Informática del I.E.S. Canarias.
 
 ## Ejecución
 
 Descargamos el código fuente del bot y entramos dentro:
 
 ```bash
-git clone https://github.com/iesdpm/MinikBot.git
-cd MinikBot
+git clone https://github.com/iescanarias/CanaBot.git
+cd CanaBot
 ```
 
 Lo compilamos:
